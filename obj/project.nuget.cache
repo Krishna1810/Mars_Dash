@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gdJ4ADjcD8L5qiddTAtRt662TxndJg0064Aff6NrMjs7rQahYvB1mt4cHM2zFmIJGXiHIeqqTZx8w6rVcJqhzg==",
+  "dgSpecHash": "kqZ18f7FVWY5vI6ipEG3AXgoTVNW3kPwceKK1iWipfdmpbBsnqJWvVJmd12Z+TDtqQmztxuNETm5MPN/pcbVNg==",
   "success": true,
   "projectFilePath": "E:\\Visual_Studio Projects\\Mars_Dash\\Mars_Dash\\Mars_Dash.csproj",
   "expectedPackageFiles": [
@@ -43,10 +43,10 @@
     "C:\\Users\\61470\\.nuget\\packages\\selenium.support\\3.141.0\\selenium.support.3.141.0.nupkg.sha512",
     "C:\\Users\\61470\\.nuget\\packages\\selenium.webdriver\\3.141.0\\selenium.webdriver.3.141.0.nupkg.sha512",
     "C:\\Users\\61470\\.nuget\\packages\\selenium.webdriver.microsoftdriver\\17.17134.0\\selenium.webdriver.microsoftdriver.17.17134.0.nupkg.sha512",
-    "C:\\Users\\61470\\.nuget\\packages\\specflow\\3.4.3\\specflow.3.4.3.nupkg.sha512",
+    "C:\\Users\\61470\\.nuget\\packages\\specflow\\3.4.8\\specflow.3.4.8.nupkg.sha512",
     "C:\\Users\\61470\\.nuget\\packages\\specflow.assist.dynamic\\1.4.2\\specflow.assist.dynamic.1.4.2.nupkg.sha512",
-    "C:\\Users\\61470\\.nuget\\packages\\specflow.nunit\\3.4.3\\specflow.nunit.3.4.3.nupkg.sha512",
-    "C:\\Users\\61470\\.nuget\\packages\\specflow.tools.msbuild.generation\\3.4.3\\specflow.tools.msbuild.generation.3.4.3.nupkg.sha512",
+    "C:\\Users\\61470\\.nuget\\packages\\specflow.nunit\\3.4.8\\specflow.nunit.3.4.8.nupkg.sha512",
+    "C:\\Users\\61470\\.nuget\\packages\\specflow.tools.msbuild.generation\\3.4.8\\specflow.tools.msbuild.generation.3.4.8.nupkg.sha512",
     "C:\\Users\\61470\\.nuget\\packages\\system.appcontext\\4.1.0\\system.appcontext.4.1.0.nupkg.sha512",
     "C:\\Users\\61470\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\61470\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",

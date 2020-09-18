@@ -10,7 +10,7 @@ using System.Text;
 namespace Mars_Dash.Mars_Helper_Files
 {
     
-    class Common_Driver
+    public class Common_Driver
     {
         public IWebDriver driver;
 

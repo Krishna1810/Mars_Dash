@@ -19,12 +19,47 @@ And  I click on SigIn button, eneter valid credential and should be able to sign
 Scenario: Add the Profile Details
 Given I Login to portal and navigate to profile page
 Then I should be able to add language information
-Then I should be able to add skills information
+
+@mytag
+Scenario: Skill information
+Given I Login to portal and navigate to profile page
+Then I should be able to add,update and delete information in skill section
+
+@mytag
+Scenario:Education Information
+Given I Login to portal and navigate to profile page
 Then I should be able to perform add, update and delete information in education section
-#Then I should be able to add certification information
-#Then I should be able to select relevant option at availability drop down, Hours and Earning target
 
+@mytag
+Scenario:Certification Information
+Given I Login to portal and navigate to profile page
+Then I should be able to perform add, update and delete information in Certification section
 
+@mytag
+Scenario: Side-Menu Availability
+Given I Login to portal and navigate to profile page
+And I should be able to set my Availability
+
+@mytag
+Scenario: SideMenu- Hours
+Given I Login to portal and navigate to profile page
+Then I should be able set my Hours
+
+@mytag
+Scenario: SideMenu- Earn Target
+Given I Login to portal and navigate to profile page
+Then I should be able set Earning Target
+
+@mytag
+Scenario: SideMenu- Description
+Given I Login to portal and navigate to profile page
+Then I should be able write description
+
+@mytag
+Scenario: ShareSkills
+Given I Login to portal and navigate to profile webpage
+And I click on Share Skill button and Navigate to share skill page
+Then I should be able to add share skill information
 
 
 

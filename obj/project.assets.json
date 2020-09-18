@@ -686,7 +686,7 @@
           "build/Selenium.WebDriver.MicrosoftDriver.targets": {}
         }
       },
-      "SpecFlow/3.4.3": {
+      "SpecFlow/3.4.8": {
         "type": "package",
         "dependencies": {
           "BoDi": "1.4.1",
@@ -720,12 +720,12 @@
           "lib/netstandard2.0/SpecFlow.Assist.Dynamic.dll": {}
         }
       },
-      "SpecFlow.NUnit/3.4.3": {
+      "SpecFlow.NUnit/3.4.8": {
         "type": "package",
         "dependencies": {
           "NUnit": "3.11.0",
-          "SpecFlow": "[3.4.3]",
-          "SpecFlow.Tools.MsBuild.Generation": "[3.4.3]"
+          "SpecFlow": "[3.4.8]",
+          "SpecFlow.Tools.MsBuild.Generation": "[3.4.8]"
         },
         "compile": {
           "lib/netstandard2.0/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll": {}
@@ -738,10 +738,10 @@
           "build/SpecFlow.NUnit.targets": {}
         }
       },
-      "SpecFlow.Tools.MsBuild.Generation/3.4.3": {
+      "SpecFlow.Tools.MsBuild.Generation/3.4.8": {
         "type": "package",
         "dependencies": {
-          "SpecFlow": "[3.4.3]"
+          "SpecFlow": "[3.4.8]"
         },
         "build": {
           "build/SpecFlow.Tools.MsBuild.Generation.props": {},
@@ -2908,10 +2908,10 @@
         "selenium.webdriver.microsoftdriver.nuspec"
       ]
     },
-    "SpecFlow/3.4.3": {
-      "sha512": "8JjN6MdqGqlEGhmVc53cCsIogMYqygHmKENEF4cxath5BE4Pp1V3Z6f783yE++3awQybRtiy5AXvx9i4lFXMsA==",
+    "SpecFlow/3.4.8": {
+      "sha512": "R2LEsViibWvXTInP5UM7dnfW9debGZAyye6V6yRDJEaxuBL8ndpBysyEfHa/F0NsLMZVsFNoTdh2fBn4jC1jGg==",
       "type": "package",
-      "path": "specflow/3.4.3",
+      "path": "specflow/3.4.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2929,7 +2929,7 @@
         "lib/netstandard2.0/TechTalk.SpecFlow.dll",
         "lib/netstandard2.0/TechTalk.SpecFlow.pdb",
         "lib/netstandard2.0/TechTalk.SpecFlow.xml",
-        "specflow.3.4.3.nupkg.sha512",
+        "specflow.3.4.8.nupkg.sha512",
         "specflow.nuspec"
       ]
     },
@@ -2949,10 +2949,10 @@
         "specflow.assist.dynamic.nuspec"
       ]
     },
-    "SpecFlow.NUnit/3.4.3": {
-      "sha512": "+L/wyCSI41r6N8x/Q2pt3i4PT2oTcVENE3IWefeCD4tYmZHIgaD5wv/GpcNNvQTysd7LjfUkyedXPX+t9oNXrg==",
+    "SpecFlow.NUnit/3.4.8": {
+      "sha512": "/NsGIvM+KBcUAC+90XqCMdDg+FsRb9URVKyvaY7vweQHDmBNA+nRJjOssXUqc/+HLuMB8ZuOBny33lam3eTzIA==",
       "type": "package",
-      "path": "specflow.nunit/3.4.3",
+      "path": "specflow.nunit/3.4.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2969,14 +2969,14 @@
         "lib/net461/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.pdb",
         "lib/netstandard2.0/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll",
         "lib/netstandard2.0/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.pdb",
-        "specflow.nunit.3.4.3.nupkg.sha512",
+        "specflow.nunit.3.4.8.nupkg.sha512",
         "specflow.nunit.nuspec"
       ]
     },
-    "SpecFlow.Tools.MsBuild.Generation/3.4.3": {
-      "sha512": "fokg1BsfmIrGyJMJz0fM2LCzN2eNlouJo7S1aLN9xGxYTYT0id8sh8gp9dTPDtTY+J6x5sTjdytwdRMHSUBlzA==",
+    "SpecFlow.Tools.MsBuild.Generation/3.4.8": {
+      "sha512": "pPn7dkLZ9Vc71VBjcaCxfx7N9h5a5zXU6gjsxImUXxLjPIaywY6SQCDeaCp5paYL0Po6Qka/X2JFXNLBb0TjoQ==",
       "type": "package",
-      "path": "specflow.tools.msbuild.generation/3.4.3",
+      "path": "specflow.tools.msbuild.generation/3.4.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2992,7 +2992,7 @@
         "licenses/Gherkin-LICENSE-MIT.txt",
         "licenses/Newtonsoft.Json-LICENSE-MIT.md",
         "licenses/System.ValueTuple-LICENSE-MIT.txt",
-        "specflow.tools.msbuild.generation.3.4.3.nupkg.sha512",
+        "specflow.tools.msbuild.generation.3.4.8.nupkg.sha512",
         "specflow.tools.msbuild.generation.nuspec",
         "tasks/net461/BoDi.dll",
         "tasks/net461/Cucumber.Messages.dll",
@@ -6444,10 +6444,10 @@
       "Selenium.Support >= 3.141.0",
       "Selenium.WebDriver >= 3.141.0",
       "Selenium.WebDriver.MicrosoftDriver >= 17.17134.0",
-      "SpecFlow >= 3.4.3",
+      "SpecFlow >= 3.4.8",
       "SpecFlow.Assist.Dynamic >= 1.4.2",
-      "SpecFlow.NUnit >= 3.4.3",
-      "SpecFlow.Tools.MsBuild.Generation >= 3.4.3"
+      "SpecFlow.NUnit >= 3.4.8",
+      "SpecFlow.Tools.MsBuild.Generation >= 3.4.8"
     ]
   },
   "packageFolders": {
@@ -6517,7 +6517,7 @@
           },
           "SpecFlow": {
             "target": "Package",
-            "version": "[3.4.3, )"
+            "version": "[3.4.8, )"
           },
           "SpecFlow.Assist.Dynamic": {
             "target": "Package",
@@ -6525,11 +6525,11 @@
           },
           "SpecFlow.NUnit": {
             "target": "Package",
-            "version": "[3.4.3, )"
+            "version": "[3.4.8, )"
           },
           "SpecFlow.Tools.MsBuild.Generation": {
             "target": "Package",
-            "version": "[3.4.3, )"
+            "version": "[3.4.8, )"
           }
         },
         "imports": [

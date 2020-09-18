@@ -5,7 +5,7 @@ using System.Diagnostics;
 using global::NUnit.Framework;
 using global::TechTalk.SpecFlow;
 
-[GeneratedCode("SpecFlow", "3.4.3")]
+[GeneratedCode("SpecFlow", "3.4.8")]
 [SetUpFixture]
 public class Mars_Dash_NUnitAssemblyHooks
 {

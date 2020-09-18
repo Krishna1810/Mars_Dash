@@ -68,7 +68,7 @@
             },
             "SpecFlow": {
               "target": "Package",
-              "version": "[3.4.3, )"
+              "version": "[3.4.8, )"
             },
             "SpecFlow.Assist.Dynamic": {
               "target": "Package",
@@ -76,11 +76,11 @@
             },
             "SpecFlow.NUnit": {
               "target": "Package",
-              "version": "[3.4.3, )"
+              "version": "[3.4.8, )"
             },
             "SpecFlow.Tools.MsBuild.Generation": {
               "target": "Package",
-              "version": "[3.4.3, )"
+              "version": "[3.4.8, )"
             }
           },
           "imports": [
