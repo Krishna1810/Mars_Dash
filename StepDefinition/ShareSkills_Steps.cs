@@ -1,4 +1,5 @@
-﻿using Mars_Dash.Mars_Pages;
+﻿
+using Mars_Dash.Mars_Pages;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
@@ -17,11 +18,13 @@ namespace Mars_Dash.StepDefinition
         [Given(@"I Login to portal and navigate to profile webpage")]
         public void GivenILoginToPortalAndNavigateToProfileWebpage()
         {
-            Mars_Home_Page HomePage = new Mars_Home_Page();
-            HomePage.OpenPage(driver);
 
-            Mars_LogIn loginpage = new Mars_LogIn();
-            loginpage.SignIn(driver);
+            HomePage H_Page = new HomePage();
+            H_Page.Home_Page_In(driver);
+            
+            Mars_LogIn Common_login = new Mars_LogIn();
+            Common_login.SignIn(driver);
+
         }
 
         [Given(@"I click on Share Skill button and Navigate to share skill page")]

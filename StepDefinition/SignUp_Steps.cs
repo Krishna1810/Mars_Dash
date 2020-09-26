@@ -1,4 +1,5 @@
-﻿using Mars_Dash.Mars_Pages;
+﻿
+using Mars_Dash.Mars_Pages;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -14,16 +15,16 @@ namespace Mars_Dash.FeatureFile.StepDefinition
     [Binding]
  
    public sealed class SignUp_Steps
-    { 
+    {
         IWebDriver driver = new ChromeDriver();
 
         [Given(@"Navigate to Home page and Click on Join Button")]
         
         public void GivenNavigateToHomePageAndClickOnJoinButton()
         {
-            Mars_Home_Page HomePage = new Mars_Home_Page();
-            HomePage.OpenPage(driver);
-            Thread.Sleep(2000);
+
+            HomePage H_Page = new HomePage();
+            H_Page.Home_Page_In(driver);
             Mars_SignUp S_up = new Mars_SignUp();
             S_up.ClickOnJoin(driver);
         }

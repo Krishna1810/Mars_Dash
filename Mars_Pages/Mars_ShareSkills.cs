@@ -1,6 +1,8 @@
 ﻿using Dynamitey.DynamicObjects;
 using Dynamitey.Internal.Optimization;
+using Mars_Dash.CommonProperty;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
@@ -11,12 +13,13 @@ namespace Mars_Dash.Mars_Pages
 {
     class Mars_ShareSkills
     {
+        
         public void ShareSkillButton(IWebDriver driver)
         {
 
 
             //Click on Shareskill Button
-            new WebDriverWait(driver, TimeSpan.FromSeconds(20)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//section[@class='nav-secondary']//div[@class='ui eight item menu']//div[@class='right item']//a[@class='ui basic green button']")));
+            WaitHelper.Waitclickable(driver,"XPath", "//section[@class='nav-secondary']//div[@class='ui eight item menu']//div[@class='right item']//a[@class='ui basic green button']");
             driver.FindElement(By.XPath("//section[@class='nav-secondary']//div[@class='ui eight item menu']//div[@class='right item']//a[@class='ui basic green button']")).Click();
         }
         public void Add_ShareSkillsDetails(IWebDriver driver) 
@@ -62,7 +65,7 @@ namespace Mars_Dash.Mars_Pages
             // driver.FindElement(By.Name("startDate")).Click();
 
             //Skill Trade
-            new WebDriverWait(driver, TimeSpan.FromSeconds(20)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//label[text()='Skill-exchange']")));
+            WaitHelper.Waitclickable(driver, "XPath", "//label[text()='Skill-exchange']");
             driver.FindElement(By.XPath("//label[text()='Skill-exchange']")).Click();
 
             //Skill Exchange

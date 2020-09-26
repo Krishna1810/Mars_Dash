@@ -1,6 +1,8 @@
-﻿using Mars_Dash.Mars_Helper_Files;
+﻿
+using Mars_Dash.CommonProperty;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
@@ -10,13 +12,14 @@ using System.Threading;
 namespace Mars_Dash.Mars_Pages
 {
     class Mars_SignUp
+
     {
         [OneTimeSetUp]
         public void ClickOnJoin(IWebDriver driver)
         {
-            WebDriverWait wait = new WebDriverWait(driver, new TimeSpan(0, 0, 20));
+           
 
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='home']/div/div/div[1]/div/button")));
+            WaitHelper.Waitclickable(driver,"XPath","//*[@id='home']/div/div/div[1]/div/button");
             IWebElement JoinButton = driver.FindElement(By.XPath("//*[@id='home']/div/div/div[1]/div/button"));
             JoinButton.Click();
         }

@@ -1,4 +1,5 @@
-﻿using Mars_Dash.Mars_Helper_Files;
+﻿
+
 using Mars_Dash.Mars_Pages;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -14,17 +15,21 @@ namespace Mars_Dash.StepDefinition
     [Binding]
     public sealed class BasicProfileSetUp_Steps
     {
+
         IWebDriver driver = new ChromeDriver();
-
-        [Given(@"I Login to portal and navigate to profile page")]
-        public void GivenILoginToPortalAndNavigateToProfilePage()
+        [When(@"I Login to portal and navigate to profile page")]
+        public void WhenILoginToPortalAndNavigateToProfilePage()
         {
-            Mars_Home_Page HomePage = new Mars_Home_Page();
-            HomePage.OpenPage(driver);
 
-            Mars_LogIn loginpage = new Mars_LogIn();
-            loginpage.SignIn(driver);
-        }   
+            HomePage H_Page = new HomePage();
+            H_Page.Home_Page_In(driver);
+
+            Mars_LogIn Common_login = new Mars_LogIn();
+            Common_login.SignIn(driver);
+
+        }
+
+ 
 
 
         [Then(@"I should be able to add language information")]

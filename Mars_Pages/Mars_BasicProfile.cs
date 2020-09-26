@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Mars_Dash.CommonProperty;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
@@ -13,11 +14,11 @@ namespace Mars_Dash.Mars_Pages
 {
     class Mars_BasicProfile
     {
-        
+        public IWebDriver driver;
         public void LanguageInformation(IWebDriver driver)
         {
-            
-            new WebDriverWait(driver, TimeSpan.FromSeconds(20)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//div[@class='row']//form[@class='ui form']//div[@class='ui top attached tabular menu']//a[text()='Languages']")));
+
+            WaitHelper.Waitclickable(driver, "XPath", "//div[@class='row']//form[@class='ui form']//div[@class='ui top attached tabular menu']//a[text()='Languages']");
 
             driver.FindElement(By.XPath("//div[@class='row']//form[@class='ui form']//div[@class='ui top attached tabular menu']//a[text()='Languages']")).Click();
             driver.FindElement(By.XPath("//div[@data-tab='first']//div[@class='row']//thead/tr/th[@class='right aligned']//div[text()='Add New']")).Click();
@@ -25,15 +26,15 @@ namespace Mars_Dash.Mars_Pages
             driver.FindElement(By.XPath("//select[@name='level']")).Click();
             driver.FindElement(By.XPath("//select[@name='level']//option[@value='Basic']")).Click();
             driver.FindElement(By.XPath("//div[@class='six wide field']//input[@class='ui teal button']")).Click();
-
-            new WebDriverWait(driver,TimeSpan.FromSeconds(20)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//td[text()='English']//parent::tr//following-sibling::td[@class='right aligned']//span[@class='button']/i[@class='outline write icon']")));
+            
+            WaitHelper.Waitclickable(driver, "XPath", "//td[text()='English']//parent::tr//following-sibling::td[@class='right aligned']//span[@class='button']/i[@class='outline write icon']");
             //Performing Update operation(Testing update element)
             driver.FindElement(By.XPath("//td[text()='English']//parent::tr//following-sibling::td[@class='right aligned']//span[@class='button']/i[@class='outline write icon']")).Click();
             driver.FindElement(By.XPath("//span[@class='buttons-wrapper']//input[@value='Cancel']")).Click();
 
             driver.FindElement(By.XPath("//td[text()='English']//parent::tr//following-sibling::td[@class='right aligned']//span[@class='button']/i[@class='outline write icon']")).Click();
             driver.FindElement(By.XPath("//input[@placeholder='Add Language']")).Clear();
-            new WebDriverWait(driver, TimeSpan.FromSeconds(20)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.Name("name")));
+            WaitHelper.Waitclickable(driver, "Name","name");
             driver.FindElement(By.Name("name")).SendKeys("Gujarati");
             driver.FindElement(By.Name("level")).Click();
             driver.FindElement(By.XPath("//select[@class='ui dropdown']//option[@value='Fluent']")).Click();
@@ -41,7 +42,7 @@ namespace Mars_Dash.Mars_Pages
 
 
             //Adding second language Information
-            Thread.Sleep(2000);
+            WaitHelper.Waitclickable(driver, "XPath", "//div[@class='row']//form[@class='ui form']//div[@class='ui top attached tabular menu']//a[text()='Languages']");
             driver.FindElement(By.XPath("//div[@class='row']//form[@class='ui form']//div[@class='ui top attached tabular menu']//a[text()='Languages']")).Click();
             driver.FindElement(By.XPath("//div[@data-tab='first']//div[@class='row']//thead/tr/th[@class='right aligned']//div[text()='Add New']")).Click();
             driver.FindElement(By.XPath("//div[@class='fields']//div[@class='five wide field']//input[@name='name']")).SendKeys("Hindi");
@@ -50,14 +51,14 @@ namespace Mars_Dash.Mars_Pages
             driver.FindElement(By.XPath("//input[@value='Add']")).Click();
 
             //Testing delete element to delete first added language
-            Thread.Sleep(2000);
+            WaitHelper.Waitclickable(driver, "XPath", "//td[text()='Gujarati']//parent::tr//following-sibling::td[@class='right aligned']//span//i[@class='remove icon']");
             driver.FindElement(By.XPath("//td[text()='Gujarati']//parent::tr//following-sibling::td[@class='right aligned']//span//i[@class='remove icon']")).Click();
             //driver.FindElement(By.XPath("//td[text()='Hindi']//parent::tr//following-sibling::td[@class='right aligned']//span//i[@class='remove icon']")).Click();
         }
         public void SkillInformation(IWebDriver driver)
         {
             //Enter Data
-            Thread.Sleep(2000);
+            WaitHelper.Waitclickable(driver, "XPath", "//a[@data-tab='second']");
             driver.FindElement(By.XPath("//a[@data-tab='second']")).Click();
             driver.FindElement(By.XPath("//div[@class='ui teal button' and text()='Add New']")).Click();
             driver.FindElement(By.XPath("//input[@placeholder='Add Skill']")).SendKeys("Testing");
@@ -66,7 +67,7 @@ namespace Mars_Dash.Mars_Pages
             driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/span/input[1]")).Click();
 
             //Update data
-            Thread.Sleep(2000);
+            WaitHelper.Waitclickable(driver, "XPath", "//td[text()='Testing']//parent::tr//following-sibling::td[@class='right aligned']//span[@class='button']//i[@class='outline write icon']");
             driver.FindElement(By.XPath("//td[text()='Testing']//parent::tr//following-sibling::td[@class='right aligned']//span[@class='button']//i[@class='outline write icon']")).Click();
             driver.FindElement(By.XPath("//input[@value='Testing']")).Clear();
             Thread.Sleep(2000);
@@ -78,11 +79,11 @@ namespace Mars_Dash.Mars_Pages
         }
         public void EductaionInformation(IWebDriver driver)
         {
-            new WebDriverWait(driver, TimeSpan.FromSeconds(20)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//div[@class='ui top attached tabular menu']//a[@data-tab='third']")));
+            WaitHelper.Waitclickable(driver, "XPath", "//div[@class='ui top attached tabular menu']//a[@data-tab='third']");
             //click on Education Tab
             driver.FindElement(By.XPath("//div[@class='ui top attached tabular menu']//a[@data-tab='third']")).Click();
             //Add Educational Data
-            new WebDriverWait(driver, TimeSpan.FromSeconds(20)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//th[text()='University']//parent::tr//following-sibling::th[@class='right aligned']//div[text()='Add New']")));
+            WaitHelper.Waitclickable(driver, "XPath", "//th[text()='University']//parent::tr//following-sibling::th[@class='right aligned']//div[text()='Add New']");
             driver.FindElement(By.XPath("//th[text()='University']//parent::tr//following-sibling::th[@class='right aligned']//div[text()='Add New']")).Click();
             driver.FindElement(By.Name("instituteName")).SendKeys("CSU");
             driver.FindElement(By.XPath("//div[@class='six wide field']//select[@name='country']")).Click();
