@@ -60,15 +60,14 @@ namespace Mars_Dash.StepDefinition
             Mars_BasicProfile Profile_steps = new Mars_BasicProfile();
             Profile_steps.CertificationInformation(driver);
         }
-        
-        [Given(@"I should be able to set my Availability")]
-        public void GivenIShouldBeAbleToSetMyAvailability()
+        [Then(@"I should be able to set my Availability")]
+        public void ThenIShouldBeAbleToSetMyAvailability()
         {
-
             Mars_BasicProfile Profile_steps = new Mars_BasicProfile();
             Profile_steps.SideMenu(driver);
 
         }
+
         [Then(@"I should be able set my Hours")]
         public void ThenIShouldBeAbleSetMyHours()
         {
