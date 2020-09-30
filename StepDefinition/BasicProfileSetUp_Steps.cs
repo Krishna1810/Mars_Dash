@@ -29,15 +29,13 @@ namespace Mars_Dash.StepDefinition
 
         }
 
- 
-
-
-        [Then(@"I should be able to add language information")]
-        public void ThenIShouldBeAbleToAddLanguageInformation()
+        [Then(@"I should be able to add, update and delte information in language section")]
+        public void ThenIShouldBeAbleToAddUpdateAndDelteInformationInLanguageSection()
         {
             Mars_BasicProfile Profile_steps = new Mars_BasicProfile();
             Profile_steps.LanguageInformation(driver);
         }
+
 
         [Then(@"I should be able to add,update and delete information in skill section")]
         public void ThenIShouldBeAbleToAddUpdateAndDeleteInformationInSkillSection()

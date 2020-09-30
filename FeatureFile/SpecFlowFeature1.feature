@@ -17,8 +17,3 @@ And  I click on SigIn button, eneter valid credential and should be able to sign
 
 
 
-
-
-
-
-

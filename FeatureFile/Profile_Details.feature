@@ -3,7 +3,7 @@
 @mytag
 Scenario: Add the Profile Details
 When I Login to portal and navigate to profile page
-Then I should be able to add language information
+Then I should be able to add, update and delte information in language section
 
 @mytag
 Scenario: Skill information

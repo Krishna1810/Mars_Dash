@@ -4,6 +4,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using TechTalk.SpecFlow;
@@ -26,26 +27,33 @@ namespace Mars_Dash.StepDefinition
             Common_login.SignIn(driver);
 
         }
-
-        [Given(@"I click on Share Skill button and Navigate to share skill page")]
-        public void GivenIClickOnShareSkillButtonAndNavigateToShareSkillPage()
+        [When(@"I click on Share Skill button and Navigate to ServiceListing Page")]
+        public void WhenIClickOnShareSkillButtonAndNavigateToServiceListingPage()
         {
-            {
-                Mars_ShareSkills Share_skill = new Mars_ShareSkills();
-                Share_skill.ShareSkillButton(driver);
-            }
+            Mars_ShareSkills Share_skill = new Mars_ShareSkills();
+            Share_skill.ShareSkillButton(driver);
         }
 
 
-        [Then(@"I should be able to add share skill information")]
-        public void ThenIShouldBeAbleToAddShareSkillInformation()
+        [When(@"I should be able to perform add and delte operation on added data")]
+        public void WhenIShouldBeAbleToPerformAddAndDelteOperationOnAddedData()
         {
             Mars_ShareSkills Share_skill = new Mars_ShareSkills();
             Share_skill.Add_ShareSkillsDetails(driver);
-            
+        }
+
+
+        [Then(@"I shoul be able to save data successfully and Navigate to ManageListing page")]
+        public void ThenIShoulBeAbleToSaveDataSuccessfullyAndNavigateToManageListingPage()
+        {
+            Mars_ShareSkills Share_skill = new Mars_ShareSkills();
+            Share_skill.SaveDataSuccessfully(driver);
 
         }
-        
+
+
+
+
 
 
     }

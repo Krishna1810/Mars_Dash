@@ -31,21 +31,15 @@ namespace Mars_Dash.Mars_Pages
            
          IWebElement signInButton = driver.FindElement(By.XPath("//*[@id='home']/div/div/div[1]/div/a"));
          signInButton.Click();
-
          
-
-
-         
-         //Enter Email...
-
+            
+          //Enter Email...
          IWebElement Email = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[1]/input"));
-
          //Email.SendKeys(ExcelLibHelpers.ReadData(2,"user"));
         Email.SendKeys("kr.krishna1818@gmail.com");
 
 
         //Enter Password...
-
          IWebElement Password = driver.FindElement(By.Name("password"));
         //Password.SendKeys(ExcelLibHelpers.ReadData(2, "pass"));
          Password.SendKeys("Krish1828@");
@@ -55,8 +49,7 @@ namespace Mars_Dash.Mars_Pages
          IWebElement RememberMe = driver.FindElement(By.Name("rememberDetails"));
          RememberMe.Click();
 
-
-            IWebElement LoginButtonClick = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[4]/button"));
+        IWebElement LoginButtonClick = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[4]/button"));
             LoginButtonClick.Click();
 
             try
