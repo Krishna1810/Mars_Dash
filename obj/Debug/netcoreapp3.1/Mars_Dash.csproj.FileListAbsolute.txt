@@ -138,4 +138,7 @@ E:\Visual_Studio Projects\Mars_Dash\Mars_Dash\bin\Debug\netcoreapp3.1\Microsoft.
 E:\Visual_Studio Projects\Mars_Dash\Mars_Dash\bin\Debug\netcoreapp3.1\ExcelNumberFormat.dll
 E:\Visual_Studio Projects\Mars_Dash\Mars_Dash\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
 E:\Visual_Studio Projects\Mars_Dash\Mars_Dash\bin\Debug\netcoreapp3.1\System.IO.Packaging.dll
+E:\Visual_Studio Projects\Mars_Dash\Mars_Dash\bin\Debug\netcoreapp3.1\Interop.AutoItX3Lib.dll
+E:\Visual_Studio Projects\Mars_Dash\Mars_Dash\obj\Debug\netcoreapp3.1\Interop.AutoItX3Lib.dll
+E:\Visual_Studio Projects\Mars_Dash\Mars_Dash\obj\Debug\netcoreapp3.1\Mars_Dash.csproj.ResolveComReference.cache
 E:\Visual_Studio Projects\Mars_Dash\Mars_Dash\obj\Debug\netcoreapp3.1\Mars_Dash.csproj.CoreCompileInputs.cache

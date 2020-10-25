@@ -15,6 +15,7 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
+using TechTalk.SpecFlow;
 using Assert = NUnit.Framework.Assert;
 
 
@@ -23,24 +24,24 @@ namespace Mars_Dash.Mars_Pages
     public class Mars_LogIn
     {
         
-
+        [BeforeTestRun]
         public void SignIn(IWebDriver driver)
         {
             
 
            
-         IWebElement signInButton = driver.FindElement(By.XPath("//*[@id='home']/div/div/div[1]/div/a"));
+        IWebElement signInButton = driver.FindElement(By.XPath("//*[@id='home']/div/div/div[1]/div/a"));
          signInButton.Click();
          
             
           //Enter Email...
-         IWebElement Email = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[1]/input"));
+        IWebElement Email = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[1]/input"));
          //Email.SendKeys(ExcelLibHelpers.ReadData(2,"user"));
         Email.SendKeys("kr.krishna1818@gmail.com");
 
 
         //Enter Password...
-         IWebElement Password = driver.FindElement(By.Name("password"));
+        IWebElement Password = driver.FindElement(By.Name("password"));
         //Password.SendKeys(ExcelLibHelpers.ReadData(2, "pass"));
          Password.SendKeys("Krish1828@");
            
@@ -54,19 +55,13 @@ namespace Mars_Dash.Mars_Pages
 
             try
             {
-                new WebDriverWait(driver, TimeSpan.FromSeconds(20)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//div[@class='ui compact menu']//span[text()='Krishna']")));
+                
 
                 IWebElement HeyKrishna = driver.FindElement(By.XPath("//div[@class='ui compact menu']//span[text()='Krishna']"));
 
-                Assert.Pass(HeyKrishna.Text, Is.EqualTo("Hi Krishna"));
-                if (HeyKrishna.Text == "Hi Krishna")
-                {
-                    Assert.Pass();
-                }
-                else
-                {
-                    Assert.Fail();
-                }
+                Assert.AreEqual(HeyKrishna.Text, Is.EqualTo("Hi Krishna"));
+                
+               
             } catch (Exception e)
             {
                 Console.WriteLine("Validation is not performing" + e);

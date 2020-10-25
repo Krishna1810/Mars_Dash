@@ -23,6 +23,7 @@ namespace Mars_Dash.Mars_Pages
             IWebElement JoinButton = driver.FindElement(By.XPath("//*[@id='home']/div/div/div[1]/div/button"));
             JoinButton.Click();
         }
+       
         public void EnterValidData(IWebDriver driver) { 
             //Enter First Name
             IWebElement Firstname = driver.FindElement(By.Name("firstName"));
@@ -58,6 +59,7 @@ namespace Mars_Dash.Mars_Pages
 
           
         }
+        
         public void ClickMetoRegister(IWebDriver driver)
         {
             // Click on Join Button

@@ -8,10 +8,14 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
+using AutoItX3Lib;
+using NUnit.Framework;
+using OpenQA.Selenium.Html5;
+using System.IO;
 
 namespace Mars_Dash.Mars_Pages
 {
-    class Mars_ShareSkills
+    class Mars_ShareSkills:Mars_LogIn
     {
         
         public void ShareSkillButton(IWebDriver driver)
@@ -19,15 +23,24 @@ namespace Mars_Dash.Mars_Pages
 
 
             //Click on Shareskill Button
-            WaitHelper.Waitclickable(driver,"XPath", "//section[@class='nav-secondary']//div[@class='ui eight item menu']//div[@class='right item']//a[@class='ui basic green button']");
+             //WaitHelper.Waitclickable(driver,"XPath", "//section[@class='nav-secondary']//div[@class='ui eight item menu']//div[@class='right item']//a[@class='ui basic green button']");
+            Thread.Sleep(3000);
             driver.FindElement(By.XPath("//section[@class='nav-secondary']//div[@class='ui eight item menu']//div[@class='right item']//a[@class='ui basic green button']")).Click();
+            //WaitHelper.Waitclickable(driver, "Xpath", "//a[text()='Share Skill']");
+
+           
         }
+       
         public void Add_ShareSkillsDetails(IWebDriver driver)
         {
             //Title
-            driver.FindElement(By.XPath("//input[@placeholder='Write a title to describe the service you provide.']")).SendKeys("QA");
+            IWebElement Title = driver.FindElement(By.XPath("//input[@placeholder='Write a title to describe the service you provide.']"));
+            Title.SendKeys("QA");
+           
+
 
             //Description
+            WaitHelper.Waitvisible(driver, "Name", "description");
             driver.FindElement(By.Name("description")).SendKeys("Hey, I am happy to share my knowledge");
 
             //Category
@@ -73,7 +86,7 @@ namespace Mars_Dash.Mars_Pages
             WaitHelper.Waitvisible(driver, "XPath", "//div[@class='five wide field']//input[@name='startDate']");
             IWebElement CalendarStartDate = driver.FindElement(By.XPath("//div[@class='five wide field']//input[@name='startDate']"));
             CalendarStartDate.Clear();
-            CalendarStartDate.SendKeys("28/09/2020");
+            CalendarStartDate.SendKeys("30/12/2020");
 
             //Select Days
             IWebElement SelectAvailableDays = driver.FindElement(By.XPath("//input[@index='0']"));
@@ -118,11 +131,18 @@ namespace Mars_Dash.Mars_Pages
             WaitHelper.Waitclickable(driver, "XPath", "//div[@class='ui grid']//Span//i[@class='huge plus circle icon padding-25");
             IWebElement Upload = driver.FindElement(By.XPath("//div[@class='ui grid']//Span//i[@class='huge plus circle icon padding-25']"));
             Upload.Click();
+            //IAutoItX3.WinWait("Open", "File Upload", 1);
+            AutoItX3 autoIt = new AutoItX3();
+           autoIt.WinActivate("Open"); //Activate the window
+           autoIt.Send(@"C:\Users\61470\flower.jpg");
             
-            //entering The File Path to upload file
             Thread.Sleep(2000);
-            Upload.SendKeys(@"C:\Users\61470\Desktop\Pikachu.jpg");
-            
+
+            autoIt.Send("{Enter}");
+           
+
+            Thread.Sleep(2000);
+
 
             //Active Or Deactive
             WaitHelper.Waitvisible(driver, "XPath", "//h3[text()='Active']//parent::div[@class='four wide column']//following-sibling::div[@class='twelve wide column']//div[@class='ui radio checkbox']//input[@value='true']");

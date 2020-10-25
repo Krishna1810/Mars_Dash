@@ -14,7 +14,8 @@ namespace Mars_Dash.Mars_Pages
 {
     class Mars_BasicProfile
     {
-        public IWebDriver driver;
+
+
         public void LanguageInformation(IWebDriver driver)
         {
 
@@ -58,6 +59,7 @@ namespace Mars_Dash.Mars_Pages
             driver.FindElement(By.XPath("//td[text()='Gujarati']//parent::tr//following-sibling::td[@class='right aligned']//span//i[@class='remove icon']")).Click();
             //driver.FindElement(By.XPath("//td[text()='Hindi']//parent::tr//following-sibling::td[@class='right aligned']//span//i[@class='remove icon']")).Click();
         }
+        
         public void SkillInformation(IWebDriver driver)
         {
             //Enter Data
@@ -81,6 +83,7 @@ namespace Mars_Dash.Mars_Pages
             
 
         }
+        
         public void EductaionInformation(IWebDriver driver)
         {
             WaitHelper.Waitclickable(driver, "XPath", "//div[@class='ui top attached tabular menu']//a[@data-tab='third']");
@@ -129,7 +132,7 @@ namespace Mars_Dash.Mars_Pages
         }
 
 
-
+        
         public void CertificationInformation(IWebDriver driver)
         {
             new WebDriverWait(driver, TimeSpan.FromSeconds(20)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//div[@class='ui top attached tabular menu']//a[@data-tab='fourth']")));
@@ -176,7 +179,7 @@ namespace Mars_Dash.Mars_Pages
             driver.FindElement(By.XPath("//td[text()='Amazon']//parent::tr//following-sibling::td[@class='right aligned']//span//i[@class='remove icon']")).Click();
 
         }
-
+        
         public void SideMenu(IWebDriver driver)
             
         {
@@ -189,6 +192,7 @@ namespace Mars_Dash.Mars_Pages
             driver.FindElement(By.XPath("//select[@name='availabiltyType']//option[@value='1']")).Click();
         }
 
+       
         public void Hours(IWebDriver driver)
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
@@ -199,6 +203,7 @@ namespace Mars_Dash.Mars_Pages
             driver.FindElement(By.XPath("//select[@name='availabiltyHour']//option[@value='1']")).Click();
         }
 
+        
         public void EarnTarget(IWebDriver driver)
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
@@ -222,7 +227,7 @@ namespace Mars_Dash.Mars_Pages
 
             
             }
-
+        
         public void Description(IWebDriver driver)
         {
             new WebDriverWait(driver, TimeSpan.FromSeconds(20)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//h3[text()='Description']//span//i[@class='outline write icon']")));
